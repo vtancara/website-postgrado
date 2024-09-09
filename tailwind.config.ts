@@ -15,13 +15,13 @@ const config: Config = {
     extend: {
       colors: {
         trueGray: colors.neutral,
-        primary: '#161D6F', // Example primary color
-        secondary: '#0B2F9F', // Example secondary color
+        primary: '#2F2F81', // Example primary color
+        secondary: '#F03055', // Example secondary color
         customBlueBtnLink: '#1D24CA', // Example custom color
       },
     },
     fontFamily: {
-      sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
       stock: [defaultTheme.fontFamily.sans],
     },
   },
