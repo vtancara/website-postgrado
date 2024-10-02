@@ -10,8 +10,9 @@ import { Cta } from "@/components/Cta";
 import { benefitOne, benefitTwo } from "@/components/data";
 export default function Home() {
   return (
+    <>
+    <Hero />
     <Container>
-      <Hero />
       <SectionTitle
         preTitle="Nextly Benefits"
         title=" Why should you use this landing page"
@@ -53,5 +54,6 @@ export default function Home() {
       <Faq />
       <Cta />
     </Container>
+    </>
   );
 }
