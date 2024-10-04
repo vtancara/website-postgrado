@@ -1,15 +1,16 @@
 import React from "react";
-import { Container } from "@/components/Container";
+import {Container} from "@/components/Container";
 import dynamic from 'next/dynamic';
-import { LatLngExpression, LatLngTuple } from "leaflet";
+import {LatLngExpression, LatLngTuple} from "leaflet";
 
 
 const MapWithNoSSR = dynamic(() => import('./Map').then((module) => module.Map), { ssr: false });
 
 export function Footer() {
-  const center: LatLngExpression = [51.505, -0.09];
+  const center: LatLngExpression = [-16.5048959, -68.1300381];
   const zoom = 13;
-  const markerPosition: LatLngTuple = [51.5, -0.09];
+  const markerPosition: LatLngTuple = [-16.5048959, -68.1300381];
+
   return (
     <div className="relative">
       <Container>
