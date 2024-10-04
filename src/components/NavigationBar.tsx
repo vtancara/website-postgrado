@@ -12,7 +12,7 @@ export const NavigationBar = () => {
 
   return (
     <div className="w-full bg-primary">
-      <nav className="container relative flex flex-wrap items-center p-4 mx-auto xl:px-1 sm:justify-center lg:justify-end">
+      <nav className="container relative flex flex-wrap items-center p-4 mx-auto xl:px-1 sm:justify-center xs:justify-center lg:justify-end">
         {/* menu  */}
         <div className="text-center lg:flex lg:items-center">
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">

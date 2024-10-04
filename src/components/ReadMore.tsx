@@ -1,6 +1,4 @@
 import React from "react";
-import { Container } from "@/components/Container";
-import Image from "next/image";
 import { ReadMoreElement } from "./ReadMoreElement";
 
 export const ReadMore = () => {
