@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 
-interface ReadMoreElementType {
+interface StatisticsElementType {
   image: string
   text: string
 }
 
-export const ReadMoreElement = ({ image, text }: ReadMoreElementType) => {
+export const StatisticsElement = ({ image, text }: StatisticsElementType) => {
   return (
     <>
       <div className="container p-6 ">
