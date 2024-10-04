@@ -4,35 +4,34 @@ import {ChevronLeft, ChevronRight} from 'lucide-react';
 const teachers = [
     {
         name: "Dr. Carlos Mendoza",
-        image: "/api/placeholder/120/120",
+        image: "/teachers/image1.jpg",
         specialty: "Inteligencia Artificial",
         description: "Experto en machine learning y redes neuronales."
     },
     {
         name: "Dra. Ana Flores",
-        image: "/api/placeholder/120/120",
+        image: "/teachers/image2.jpg",
         specialty: "Seguridad Informática",
         description: "Investigadora líder en ciberseguridad y criptografía."
     },
     {
         name: "Mg. Roberto Paz",
-        image: "/api/placeholder/120/120",
+        image: "/teachers/image3.jpg",
         specialty: "Desarrollo de Software",
         description: "Especialista en metodologías ágiles y arquitectura de software."
     },
     {
         name: "Dra. Laura Gutiérrez",
-        image: "/api/placeholder/120/120",
+        image: "/teachers/image4.jpg",
         specialty: "Bases de Datos",
         description: "Experta en sistemas de gestión de bases de datos y Big Data."
     },
     {
         name: "Dr. Javier Morales",
-        image: "/api/placeholder/120/120",
+        image: "/teachers/image5.jpg",
         specialty: "Redes y Comunicaciones",
         description: "Investigador en redes 5G y comunicaciones inalámbricas."
     },
-    // Agrega más docentes según sea necesario
 ];
 
 const TeacherSlider = () => {
