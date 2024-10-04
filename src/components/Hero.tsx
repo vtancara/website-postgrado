@@ -1,12 +1,14 @@
-import Image from "next/image";
-import { Container } from "@/components/Container";
-import heroImg from "../../public/img/student2.jpg";
-import { ImageCarousel } from "./ImageCarousel";
+import { ImageCarousel } from "./Carrousel";
 
 export const Hero = () => {
+  const images = [
+    '/img/banner1.png',
+    '/img/banner2.png',
+    '/img/banner3.jpg',
+  ];
   return (
     <>
-       <ImageCarousel/>
+      <ImageCarousel images={images} />
     </>
   );
 }

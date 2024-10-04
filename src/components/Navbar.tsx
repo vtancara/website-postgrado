@@ -6,12 +6,11 @@ import { Disclosure } from "@headlessui/react";
 
 export const Navbar = () => {
   const navigation = [
-    "Ofertas academicas",
-    "Admisión",
-    "Postgraduantes",
-    "Contacto",
-    "Comunicados",
-    "Servicios",
+    "Inicio",
+    "Mastrías",
+    "Doctorado",
+    "Tramites",
+    "Sobre nosotros",
   ];
 
   return (
