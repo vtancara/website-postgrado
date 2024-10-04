@@ -7,7 +7,7 @@ import {LatLngExpression, LatLngTuple} from "leaflet";
 const MapWithNoSSR = dynamic(() => import('./Map').then((module) => module.Map), {ssr: false});
 
 export function Footer() {
-    const center: LatLngExpression = [51.505, -0.09]; // London coordinates
+    const center: LatLngExpression = [51.505, -0.09];
     const zoom = 13;
     const markerPosition: LatLngTuple = [51.5, -0.09];
     return (
