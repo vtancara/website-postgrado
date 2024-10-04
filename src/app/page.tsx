@@ -18,6 +18,7 @@ export default function Home() {
         <>
             <Hero/>
             <Container>
+                <ReadMore/>
                 <SectionTitle
                     preTitle="Nextly Benefits"
                     title=" Why should you use this landing page"
