@@ -1,6 +1,6 @@
 'use client'
-import React, { useState, useEffect, Fragment } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React, {useEffect, useState} from 'react';
+import {ChevronLeft, ChevronRight} from 'lucide-react';
 import Image from "next/image"
 
 interface ImageCarouselType {
