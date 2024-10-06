@@ -1,68 +1,90 @@
 "use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image"
-import { Disclosure } from "@headlessui/react";
 
 export const NavigationBar = () => {
-  const navigation = [
-    "Bilioteca virtual",
-    "Preguntas Frecuentes",
-    "Reglamentos",
-  ];
+  const [show, setShow] = useState(true);
+  let lastScrollY = 0;
+
+  const handleScroll = () => {
+    if (window.scrollY > lastScrollY) {
+      setShow(false); // Ocultar al hacer scroll hacia abajo
+    } else {
+      setShow(true); // Mostrar al hacer scroll hacia arriba
+    }
+    lastScrollY = window.scrollY;
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navigation = ["Biblioteca virtual", "Preguntas Frecuentes", "Reglamentos"];
 
   return (
-    <div className="w-full bg-primary">
-      <nav className="container relative flex flex-wrap items-center p-4 mx-auto xl:px-1 sm:justify-center xs:justify-center lg:justify-end">
-        {/* menu  */}
-        <div className="text-center lg:flex lg:items-center">
-          <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
-            {navigation.map((menu, index) => (
-              <li className="mr-3 nav__item" key={index}>
-                <Link href="/" className="inline-block px-2 py-1 text-lg font-white text-gray-400 no-underline dark:text-gray-200 hover:text-gray-50 focus:text-white focus:outline-none dark:focus:bg-gray-800">
-                  {menu}
-                </Link>
-              </li>
-            ))}
-            <div className="flex space-x-5 text-gray-400">
-              <a
-                href=""
-                target="_blank"
-                rel="noopener"
-                className="hover:text-gray-50"
-              >
-                <span className="sr-only">Facebook</span>
-                <Facebook />
-              </a>
-              <a href="" target="_blank" rel="noopener"
-                className="hover:text-gray-50">
-                <span className="sr-only">Linkedin</span>
-                <Linkedin />
-              </a>
-              <a
-                href=""
-                target="_blank"
-                rel="noopener"
-                className="hover:text-gray-50"
-              >
-                <span className="sr-only">Twitter</span>
-                <Twitter />
-              </a>
-              <a
-                href=""
-                target="_blank"
-                rel="noopener"
-                className="hover:text-gray-50"
-              >
-                <span className="sr-only">Instagram</span>
-                <Instagram />
-              </a>
-            </div>
-          </ul>
+    <div
+      className={`w-full bg-primary transition-all duration-300 ${show ? "h-16" : "h-0"
+        } overflow-hidden`}
+    >
+      <nav className="container flex items-center justify-between mx-auto p-4">
+        {/* Menú de navegación */}
+        <ul className="flex space-x-4">
+          {navigation.map((menu, index) => (
+            <li key={index} className="text-white">
+              <Link href="/" className="hover:text-gray-300">
+                {menu}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* Íconos de redes sociales a la derecha del menú */}
+        <div className="flex space-x-5 text-gray-400">
+          <a
+            href=""
+            target="_blank"
+            rel="noopener"
+            className="hover:text-gray-50"
+          >
+            <span className="sr-only">Facebook</span>
+            <Facebook />
+          </a>
+          <a
+            href=""
+            target="_blank"
+            rel="noopener"
+            className="hover:text-gray-50"
+          >
+            <span className="sr-only">Linkedin</span>
+            <Linkedin />
+          </a>
+          <a
+            href=""
+            target="_blank"
+            rel="noopener"
+            className="hover:text-gray-50"
+          >
+            <span className="sr-only">Twitter</span>
+            <Twitter />
+          </a>
+          <a
+            href=""
+            target="_blank"
+            rel="noopener"
+            className="hover:text-gray-50"
+          >
+            <span className="sr-only">Instagram</span>
+            <Instagram />
+          </a>
         </div>
       </nav>
     </div>
   );
-}
+};
+
+
+
 
 const Twitter = ({ size = 24 }) => (
   <svg

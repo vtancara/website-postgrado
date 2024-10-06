@@ -1,39 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 interface StatisticsElementType {
-  image: string
-  text: string
+  icon: string;
+  number: number;
+  text: string;
+  duration?: number;
 }
 
-export const StatisticsElement = ({ image, text }: StatisticsElementType) => {
+export const StatisticsElement = ({ icon, number, text, duration = 2000 }: StatisticsElementType) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const end = parseInt(number.toString(), 10);
+    const incrementTime = (duration / end) * 1000;
+
+    let timer = setInterval(() => {
+      start += 1;
+      setCount(start);
+      if (start === end) clearInterval(timer);
+    }, incrementTime);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, [number, duration]);
+
   return (
-    <>
-      <div className="container p-6 ">
-        <div className="flex justify-center px-4">
-          <Image
-            src={image}
-            height={'200'}
-            width={'200'}
-            alt={''}
-          />
-        </div>
-        <div className="flex-grow p-2">
-          <p className="mt-2 font-medium text-opacity-90 lg:text-xl">
-            {text}
-          </p>
-        </div>
-        <div className="flex-shrink-0 w-full text-center lg:w-auto">
-          <a
-            href=""
-            target="_blank"
-            rel="noopener"
-            className="text-customBlueBtnLink text-lg font-medium text-center"
-          >
-            Ver más
-          </a>
-        </div>
-      </div>
-    </>
+    <div className="flex flex-col items-center">
+      <Image
+        src={icon}
+        width={60}
+        height={60}
+        alt={text}
+        className="mb-4"
+      />
+      <h3 className="text-5xl font-bold mb-2">{count}</h3>
+      <p className="text-sm uppercase">{text}</p>
+    </div>
   );
 };
