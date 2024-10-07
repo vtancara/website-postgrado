@@ -1,27 +1,47 @@
+// Navbar.tsx
 "use client";
 import Link from "next/link";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
+import { useState, useEffect } from "react";
 
 export const Navbar = () => {
+  const [navbarTop, setNavbarTop] = useState(64); // Altura inicial del NavigationBar
   const navigation = ["Inicio", "Mastrías", "Doctorado", "Tramites", "Sobre nosotros"];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const navigationBarHeight = 64; // Ajusta esto al alto real de tu NavigationBar
+
+      if (scrollY > navigationBarHeight) {
+        setNavbarTop(0);
+      } else {
+        setNavbarTop(navigationBarHeight - scrollY);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="w-full fixed top-[var(--navbar-offset)] left-0 right-0 z-40 bg-white shadow-md transition-all duration-300">
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-1">
-        {/* Logo */}
-        <Link href="/">
+      <div
+          className="w-full fixed left-0 right-0 z-40 bg-white shadow-md transition-all duration-300"
+          style={{ top: `${navbarTop}px` }}
+      >
+        <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-1">
+          {/* Logo */}
+          <Link href="/">
           <span className="flex items-center space-x-2">
-            <span>
-              <Image
+            <Image
                 src="/img/logo.png"
                 width="200"
                 height="200"
-                alt={"Postgrado en Informática"}
-              />
-            </span>
+                alt="Postgrado en Informática"
+            />
           </span>
-        </Link>
+          </Link>
 
         <Disclosure>
           {({ open }) => (
