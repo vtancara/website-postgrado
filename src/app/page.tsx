@@ -17,8 +17,9 @@ export default function Home() {
       <Container>
         <ReadMore />
         <TeacherSlider />
-
-        <AcademicOfferSlider />
+      </Container>
+      <AcademicOfferSlider />
+      <Container>
         <Statistics />
       </Container>
     </>
