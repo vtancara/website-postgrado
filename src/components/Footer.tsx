@@ -19,6 +19,7 @@ export function Footer() {
         <Container>
           <div className="flex flex-row gap-4">
             <div className="basis-9/12">
+              <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Ubicación</h3>
               <MapWithNoSSR center={center} zoom={zoom} markerPosition={markerPosition} />
             </div>
             <div className="basis-3/12">
