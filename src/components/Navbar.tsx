@@ -35,7 +35,14 @@ export const Navbar = () => {
           <Link href="/">
           <span className="flex items-center space-x-2">
             <Image
-                src="/img/logo.png"
+                src="/img/umsa-logo.png"
+                width="35"
+                height="35"
+                alt="Postgrado en Informática"
+            />
+            <span></span>
+            <Image
+                src="/img/logo.svg"
                 width="200"
                 height="200"
                 alt="Postgrado en Informática"

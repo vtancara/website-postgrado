@@ -13,8 +13,11 @@ import { Copyright } from "@/components/Copyright";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "UMSA - Unidad de postgrado",
+  title: "UMSA - Unidad de postgrados",
   description: "",
+  icons: {
+    icon: './favicon.svg',
+  }
 };
 
 export default function RootLayout({

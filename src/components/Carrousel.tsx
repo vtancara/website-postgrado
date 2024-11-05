@@ -21,6 +21,7 @@ export const ImageCarousel = ({ images }: ImageCarouselType) => {
   useEffect(() => {
     const interval = setInterval(nextSlide, 10000); // Auto-advance every 10 seconds
     return () => clearInterval(interval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

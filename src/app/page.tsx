@@ -1,10 +1,6 @@
 "use client";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
-import { SectionTitle } from "@/components/SectionTitle";
-import { Benefits } from "@/components/Benefits";
-
-import { benefitOne, benefitTwo } from "@/components/data";
 import { ReadMore } from "@/components/ReadMore";
 import TeacherSlider from "@/components/TeacherSlider";
 import AcademicOfferSlider from "@/components/AcademicOfferSlider";
