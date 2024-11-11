@@ -5,7 +5,6 @@ import "./globals.css";
 
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { PopupWidget } from "@/components/PopupWidget";
 import { NavigationBar } from "@/components/NavigationBar";
 import { Copyright } from "@/components/Copyright";
 

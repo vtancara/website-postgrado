@@ -3,35 +3,59 @@ import EventCard from "./EventCard";
 
 const events = [
   {
-    date: "Dr. Carlos Mendoza",
-    image: "/teachers/image1.jpg",
-    hour: "Inteligencia Artificial",
+    date: "2024-11-11",
+    image: "/events/image1.jpeg",
+    schedule: {
+      start: '07:00 pm',
+      end: '10:00 pm',
+    },
     title: "Experto en machine learning y redes neuronales.",
   },
   {
-    date: "Dra. Ana Flores",
-    image: "/teachers/image2.jpg",
-    hour: "Seguridad Informática",
+    date: "2024-10-11",
+    image: "/events/image2.jpeg",
+    schedule: {
+      start: '07:00 pm',
+      end: '10:00 pm',
+    },
     title: "Investigadora líder en ciberseguridad y criptografía.",
   },
   {
-    date: "Mg. Roberto Paz",
-    image: "/teachers/image3.jpg",
-    hour: "Desarrollo de Software",
+    date: "2024-09-11",
+    image: "/events/image3.jpeg",
+    schedule: {
+      start: '07:00 pm',
+      end: '10:00 pm',
+    },
     title:
       "Especialista en metodologías ágiles y arquitectura de software.",
   },
   {
-    date: "Dra. Laura Gutiérrez",
-    image: "/teachers/image4.jpg",
-    hour: "Bases de Datos",
+    date: "2024-08-11",
+    image: "/events/image4.jpeg",
+    schedule: {
+      start: '07:00 pm',
+      end: '10:00 pm',
+    },
     title: "Experta en sistemas de gestión de bases de datos y Big Data.",
   },
   {
-    date: "Dr. Javier Morales",
-    image: "/teachers/image5.jpg",
-    hour: "Redes y Comunicaciones",
+    date: "2024-07-11",
+    image: "/events/image5.jpeg",
+    schedule: {
+      start: '07:00 pm',
+      end: '10:00 pm',
+    },
     title: "Investigador en redes 5G y comunicaciones inalámbricas.",
+  },
+  {
+    date: "2024-07-11",
+    image: "/events/image6.jpeg",
+    schedule: {
+      start: '07:00 pm',
+      end: '10:00 pm',
+    },
+    title: "Conviértete Investigador en redes 5G y comunicaciones inalámbricas.",
   },
 ];
 
