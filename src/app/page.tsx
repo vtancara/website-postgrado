@@ -5,19 +5,17 @@ import { ReadMore } from "@/components/ReadMore";
 import TeacherSlider from "@/components/TeacherSlider";
 import AcademicOfferSlider from "@/components/AcademicOfferSlider";
 import { Statistics } from "@/components/Statistics";
+import Events from "@/components/Events";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Container>
-        <ReadMore />
-        <TeacherSlider />
-      </Container>
+      <ReadMore />
+      <TeacherSlider />
+      <Events />
       <AcademicOfferSlider />
-      <Container>
-        <Statistics />
-      </Container>
+      <Statistics />
     </>
   );
 }

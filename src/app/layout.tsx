@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "UMSA - Unidad de postgrados",
   description: "",
   icons: {
-    icon: './favicon.svg',
+    icon: '../../favicon.svg',
   }
 };
 
