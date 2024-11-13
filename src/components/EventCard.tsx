@@ -20,18 +20,14 @@ const EventCard = ({ event }: EventParameterType) => {
           alt={event.title}
           className="w-50 h-50 mx-auto mb-3"
         />
-        <div className="px-6 py-4">
-          
-          <p className="text-gray-700 text-base">
-            {event.title}
-          </p>
+        <div className="p-4">
           <div className="flex flex-row">
             <div className="basis-1/4">
-              <p className="text-xm">{day}</p>
-              <p className="text-xm">{month}</p>
+              <p className="text-xl">{day}</p>
+              <p className="text-sm">{month}</p>
             </div>
-            <div className="basis-3/8">
-              <div className="font-bold text-xl mb-2">{event.title}</div>
+            <div className="basis-3/4">
+              <p className="font-bold break-words text-xl mb-2">{event.title}</p>
             </div>
           </div>
         </div>
