@@ -16,7 +16,7 @@ const config: Config = {
       colors: {
         trueGray: colors.neutral,
         primary: '#2F2F81', // Example primary color
-        secondary: '#F03055', // Example secondary color
+        secondary: '#2563eb', // Un azul vibrante que complementa bien con el primary '#2F2F81'
         customBlueBtnLink: '#1D24CA', // Example custom color
       },
       zIndex: {
