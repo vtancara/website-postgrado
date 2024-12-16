@@ -1,8 +1,8 @@
 "use client"
 import { redirect } from "next/navigation";
-import { teachers } from "../../../data/data-docentes";
+import { teachers } from "@/data/data-docentes";
 
-export default function DocentePage({ params }) {
+export default function DocentePage({ params }:{params: {id: string}}) {
   const { id } = params;
   if (params.id === '0' || !params.id) {
     // Redirect to a different page if the ID is '0'
@@ -10,7 +10,7 @@ export default function DocentePage({ params }) {
   }
   const docente = teachers.find((docente) => docente.id === id)
   if (!docente) redirect('/not-found');
-  
+
   return (
     <div className="container p-8 mx-auto xl:px-0 ">
       <div className="flex justify-center items-center w-full mt-28 pt-100">
