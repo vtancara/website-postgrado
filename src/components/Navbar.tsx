@@ -27,7 +27,7 @@ const maestrias = [
 
 export const Navbar = () => {
     const [navbarTop, setNavbarTop] = useState(64);
-    const navigation = ["Inicio", "Doctorado", "Trámites", "Sobre nosotros"];
+    const navigation = ["Doctorado", "Trámites", "Sobre nosotros"];
 
     useEffect(() => {
         const handleScroll = () => {
