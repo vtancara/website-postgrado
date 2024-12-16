@@ -1,7 +1,12 @@
+interface ScheduleType {
+  start: string;
+  end: string;
+}
+
 interface EventType {
   image: string;
   date: string;
-  hour: string;
+  schedule: ScheduleType;
   title: string;
 }
 interface EventParameterType {

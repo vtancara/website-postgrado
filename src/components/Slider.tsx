@@ -9,8 +9,7 @@ const Slider = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const { isXs, isSm, isMd, isLg, isXl, is2Xl } = useBreakpoints()
-  console.log(isXs, isSm, isMd, isLg, isXl, is2Xl)
+  const { isXs, isSm, isLg } = useBreakpoints();
 
   let elementsInSlide = 3
   if (isSm && !isLg) elementsInSlide = 2

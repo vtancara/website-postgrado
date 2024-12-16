@@ -25,7 +25,7 @@ export const ImageCarousel = ({ images }: ImageCarouselType) => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center w-full mt-28">
+    <div className="flex justify-center items-center w-full mt-28 pt-100">
       <div className="max-w-[1920px] lg:h-[600px] h-[400px] w-full relative group">
         <div className="overflow-hidden aspect-w-16 aspect-h-9">
           {images.map((image, index) => (

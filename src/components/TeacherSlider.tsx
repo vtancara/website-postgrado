@@ -1,39 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-const teachers = [
-  {
-    name: "Dr. Carlos Mendoza",
-    image: "/teachers/image1.jpg",
-    specialty: "Inteligencia Artificial",
-    description: "Experto en machine learning y redes neuronales.",
-  },
-  {
-    name: "Dra. Ana Flores",
-    image: "/teachers/image2.jpg",
-    specialty: "Seguridad Informática",
-    description: "Investigadora líder en ciberseguridad y criptografía.",
-  },
-  {
-    name: "Mg. Roberto Paz",
-    image: "/teachers/image3.jpg",
-    specialty: "Desarrollo de Software",
-    description:
-      "Especialista en metodologías ágiles y arquitectura de software.",
-  },
-  {
-    name: "Dra. Laura Gutiérrez",
-    image: "/teachers/image4.jpg",
-    specialty: "Bases de Datos",
-    description: "Experta en sistemas de gestión de bases de datos y Big Data.",
-  },
-  {
-    name: "Dr. Javier Morales",
-    image: "/teachers/image5.jpg",
-    specialty: "Redes y Comunicaciones",
-    description: "Investigador en redes 5G y comunicaciones inalámbricas.",
-  },
-];
+import Link from "next/link";
+import { teachers } from '../data/data-docentes';
 
 const TeacherSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -76,22 +44,24 @@ const TeacherSlider = () => {
             >
               {teachers.map((teacher, index) => (
                 <div key={index} className="w-1/3 flex-shrink-0 px-2">
-                  <div className="bg-white rounded-lg shadow-md p-4">
-                    <img
-                      src={teacher.image}
-                      alt={teacher.name}
-                      className="w-24 h-24 rounded-full mx-auto mb-3"
-                    />
-                    <h3 className="text-lg font-semibold text-center">
-                      {teacher.name}
-                    </h3>
-                    <p className="text-sm text-blue-600 text-center mb-2">
-                      {teacher.specialty}
-                    </p>
-                    <p className="text-xs text-gray-600 text-center">
-                      {teacher.description}
-                    </p>
-                  </div>
+                  <Link href={`/docentes/${teacher.id}`}>
+                    <div className="bg-white rounded-lg shadow-md p-4">
+                      <img
+                        src={teacher.image}
+                        alt={teacher.name}
+                        className="w-24 h-24 rounded-full mx-auto mb-3"
+                      />
+                      <h3 className="text-lg font-semibold text-center">
+                        {teacher.name}
+                      </h3>
+                      <p className="text-sm text-blue-600 text-center mb-2">
+                        {teacher.specialty}
+                      </p>
+                      <p className="text-xs text-gray-600 text-center">
+                        {teacher.description}
+                      </p>
+                    </div>
+                  </Link>
                 </div>
               ))}
             </div>
